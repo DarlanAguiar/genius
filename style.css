@@ -1,0 +1,198 @@
+.botao{
+    background-color: rgb(15, 15, 87);
+    width: 25vw;
+    height: 25vh;
+    border-radius: 100%;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 3rem;
+    text-shadow: 0 0 5px white;
+    border: solid 2px;
+    box-shadow: 0 0 4px white;
+}
+
+.botao:active{
+    background-color: rgb(55, 55, 107);
+}
+
+.texto{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:1.5rem;
+    font-weight: bolder;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.213);
+    border-radius: 6px;
+    padding: 2px;
+    text-shadow: 1px 1px 1px rgba(255, 235, 205, 0.556);
+
+}
+span{
+    color: red;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.container__vermelho{
+    width: 50vw;
+    height: 50vh;
+    background-image: linear-gradient(115deg, darkred, white);
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.container__verde{
+    width: 50vw;
+    height: 50vh;
+    background-image: linear-gradient(225deg, darkgreen, white);
+    display: flex;
+    justify-content:start;
+    align-items: flex-end;
+}
+
+.container__azul{
+    width: 50vw;
+    height: 50vh;
+    background-image: linear-gradient(45deg, darkblue, white);
+    display: flex;
+    justify-content: end;
+}
+
+.container__amarelo{
+    width: 50vw;
+    height: 50vh;
+    background-image: linear-gradient(315deg, rgb(181, 181, 3), white);
+}
+
+.container__vermelho-vermelho{
+    width: 25vw;
+    height: 25vh;
+    background-color: rgb(208, 0, 0);
+    border-top-left-radius: 100%;
+    border: solid 8px;
+    border-left-width: 2px;
+    border-top-width: 2px;
+    box-shadow: 0 0 30px black;
+}
+.container__vermelho-vermelho:active{
+    background-color: rgb(248, 120, 120);
+}
+
+.container__verde-verde{
+    width: 25vw;
+    height: 25vh;
+    background-color: rgb(0, 119, 0);
+    border-top-right-radius: 100%;
+    border: solid 8px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    box-shadow: 0 0 30px black;
+}
+.container__verde-verde:active{
+    background-color: rgb(52, 206, 52);
+}
+
+.container__azul-azul{
+    width: 25vw;
+    height: 25vh;
+    background-color: rgb(0, 0, 191);
+    border-bottom-left-radius: 100%;
+    border: solid 8px;
+    border-left-width: 2px;
+    border-bottom-width: 2px;
+    box-shadow: 0 0 30px black;
+}
+
+.container__azul-azul:active{
+    background-color: rgb(139, 139, 247);
+}
+
+.container__amarelo-amarelo{
+    width: 25vw;
+    height: 25vh;
+    background-color: rgb(201, 201, 2);
+    border-bottom-right-radius: 100%;
+    border: solid 8px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    box-shadow: 0 0 30px black;
+}
+
+.container__amarelo-amarelo:active{
+    background-color: rgb(255, 255, 63);
+}
+
+.rodape{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:1.5rem;
+    font-weight: bolder;
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.213);
+    border-radius: 6px;
+    padding: 2px;
+    text-shadow: 1px 1px 1px rgba(255, 235, 205, 0.556);
+
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 588px){
+    
+    
+    .texto{
+        font-size: 1rem;
+    }
+    
+    .container__vermelho-vermelho{
+        width: 45vw;
+        height: 30vh;
+    }
+
+    .container__verde-verde{
+        width: 45vw;
+        height: 30vh;
+    }
+
+    .container__azul-azul{
+        width: 45vw;
+        height: 30vh;
+    }
+
+    .container__amarelo-amarelo{
+        width: 45vw;
+        height: 30vh;
+    }
+
+    .botao{
+        
+        width: 45vw;
+        height: 30vh;
+    }
+
+
+    .rodape{
+        font-size: 1rem;
+    }
+}
