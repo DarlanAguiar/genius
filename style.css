@@ -19,6 +19,10 @@
     box-shadow: 0 0 4px white;
 }
 
+.botao:active{
+    background-color: rgb(55, 55, 107);
+}
+
 .jogador{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -32,6 +36,20 @@
     text-shadow: 0 0 1px red;
 }
 
+.botaoRegras{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    padding: 10px;
+    background: radial-gradient(rgba(0, 0, 0, 0.645), transparent);
+    border-radius: 5px;
+    color: white;
+    text-shadow: 0 0 1px red;
+    
+}
+
 .menu{
     position: absolute;
     left: 50%;
@@ -41,8 +59,31 @@
     display: none;
     border-radius: 4px;
     padding: 7px;
-    transition: 1s;
+   
 }
+
+
+.regras{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #888;
+    padding: 10px;
+    border: 1px solid;
+    box-shadow: 0 0 6px;
+    border-radius: 8px;
+    display: none;
+}
+
+.botaoSair{
+    padding: 5px;
+    background: radial-gradient(rgba(0, 0, 0, 0.645), transparent);
+    border-radius: 5px;
+    color: white;
+    text-shadow: 0 0 1px red;
+}
+
 
 .salvar{
     padding: 10px;
@@ -52,9 +93,7 @@
     text-shadow: 0 0 1px red;
 }
 
-.botao:active{
-    background-color: rgb(55, 55, 107);
-}
+
 
 .texto{
     font-family: Arial, Helvetica, sans-serif;

@@ -52,3 +52,13 @@ function salvaJogador (){
     campo.style.display = "none"
     location.reload();
 }
+
+function  mostraRegras(){
+    var regras = document.querySelector("[data-regras]");
+    regras.style.display = 'block'
+}
+
+function apagaRegras(){
+    var apagaRegras = document.querySelector("[data-regras]");
+    apagaRegras.style.display = 'none'
+}
