@@ -12,7 +12,14 @@
 </head>
 <body>
     <main>
-        <p class="texto" data-contador></p>
+        <button class="jogador" onclick="mostraCampo()">Adicionar Jogador</button>
+
+        <p class="texto" data-contador=""></p>
+
+        <div class="menu" data-menu="">
+            <input type="text" placeholder="Nome" data-nome="">
+            <input type="button" value="Salvar" class="salvar" data-salvar="" onclick="salvaJogador()">
+        </div>
         
         <header class="botao">Genius</header>
         <div class="container">

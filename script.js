@@ -1,3 +1,6 @@
+var nome;
+var campo;
+
 if(localStorage.contadorVisitas){
     let visitas = Number(localStorage.contadorVisitas) + 1;
 
@@ -5,28 +8,47 @@ if(localStorage.contadorVisitas){
 
 }else{
     localStorage.contadorVisitas = 1;
+    localStorage.nome = "Jogador Indefinido"
 }
 
 
 let contador = document.querySelector("[data-contador]");
 
-if(localStorage.contadorVisitas == "1"){
-    contador.innerHTML = `E ai Diegão beleza,<br>O desafio está completo, esta é sua primeira visita.`
-}else if(localStorage.contadorVisitas == "2"){
-    contador.innerHTML = `Hummm deu refresh<br>está conferindo né&#128579;.`
-}else if(localStorage.contadorVisitas == "3"){
-    contador.innerHTML = `Deu novamente!<br>tô falando que está funcionando homen .`
-}else if(localStorage.contadorVisitas == "4"){
-    contador.innerHTML = `E ai? já apertou os botões acreditando que estava tudo pronto?.`
-}else if(localStorage.contadorVisitas == "5"){
-    contador.innerHTML = `Estou vendo sua cara de despontamento ao desobrir que os botões nao fazem nada &#128514;.`
-}else if(localStorage.contadorVisitas == "6"){
-    contador.innerHTML = `Minha parde do GENIUS esta pronta, Você cuida do JS &#128517;.`
-}else if(localStorage.contadorVisitas == "7"){
-    contador.innerHTML = `Vou deixar você contando ai, vou lá no salão furar parede, fique agora com o contador.`
-}else{
-    contador.innerHTML = `Você vai jogar pela <span>${localStorage.contadorVisitas}</span> vez`
+
+if(localStorage.nome == "Jogador Indefinido"){
+
+    if(localStorage.contadorVisitas == "1"){
+        contador.innerHTML = `Olá Jogador, seja bem vindo.`
+    }else{
+        contador.innerHTML = `Você irá jogar pela <span>${localStorage.contadorVisitas}</span> vez`
+    }
+}else if(localStorage.nome != "Jogador Indefinido" && localStorage.nome.length > 0){
+    if(localStorage.contadorVisitas == "1"){
+        contador.innerHTML = `Olá ${localStorage.nome}, seja bem vindo.`
+    }else{
+        contador.innerHTML = `${localStorage.nome}, você irá jogar pela <span>${localStorage.contadorVisitas}</span> vez`
+    }
 }
 
 
-/* contador.innerHTML = `Você vai jogar pela <span>${localStorage.contadorVisitas}</span> vez` */
+
+
+function mostraCampo (){
+    campo = document.querySelector("[data-menu]");
+    campo.style.display = 'flex'
+}
+
+
+
+function salvaJogador (){
+    nome = document.querySelector("[data-nome]");
+    if(nome.value == '' || nome.value == "undefined"){
+        alert("você precisa digitar um nome");
+        return
+    }
+    console.log(nome.value)
+    localStorage.nome = nome.value;
+    localStorage.contadorVisitas = 0;
+    campo.style.display = "none"
+    location.reload();
+}
