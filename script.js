@@ -104,7 +104,7 @@ const comecar = async() =>{
             let botaoVermelho = document.querySelector("[data-botaoVermelho]")
             botaoVermelho.style.background = "#f87878"
             await sleep(1100)
-            botaoVermelho.style.background ="#d00000";
+            botaoVermelho.style.background ="#970404";
             await sleep(200)
 
         }
@@ -113,7 +113,7 @@ const comecar = async() =>{
             som2.play();
             botaoVerde.style.background = "#34ce34"
             await sleep(1100)
-            botaoVerde.style.background ="#007700";
+            botaoVerde.style.background ="#035403";
             await sleep(200)
 
         }
@@ -122,7 +122,7 @@ const comecar = async() =>{
             som3.play();
             botaoAzul.style.background = "#8b8bf7"
             await sleep(1100)
-            botaoAzul.style.background ="#0000bf";
+            botaoAzul.style.background ="#060696";
             await sleep(200)
 
         }
@@ -131,7 +131,7 @@ const comecar = async() =>{
             som4.play();
             botaoAmarelo.style.background = "#ffff3f"
             await sleep(1100)
-            botaoAmarelo.style.background ="#c9c902";
+            botaoAmarelo.style.background ="#797906";
             await sleep(200)
 
         }

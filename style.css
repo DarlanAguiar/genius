@@ -13,7 +13,7 @@
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 2.2rem;
     text-shadow: 0 0 5px white;
     border: solid 2px;
     box-shadow: 0 0 4px white;
@@ -157,7 +157,7 @@ span{
 .container__vermelho-vermelho{
     width: 35vh;
     height: 35vh;
-    background-color: #d00000;
+    background-color: #970404;
     border-top-left-radius: 100%;
     border: solid 8px;
     border-left-width: 3px;
@@ -171,7 +171,7 @@ span{
 .container__verde-verde{
     width: 35vh;
     height: 35vh;
-    background-color: #007700;
+    background-color: #035403;
     border-top-right-radius: 100%;
     border: solid 8px;
     border-right-width: 3px;
@@ -185,7 +185,7 @@ span{
 .container__azul-azul{
     width: 35vh;
     height: 35vh;
-    background-color: #0000bf;
+    background-color: #060696;
     border-bottom-left-radius: 100%;
     border: solid 8px;
     border-left-width: 3px;
@@ -200,7 +200,7 @@ span{
 .container__amarelo-amarelo{
     width: 35vh;
     height: 35vh;
-    background-color: #c9c902;
+    background-color: #797906;
     border-bottom-right-radius: 100%;
     border: solid 8px;
     border-right-width: 3px;
