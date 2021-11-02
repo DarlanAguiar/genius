@@ -212,6 +212,19 @@ span{
     background-color: #ffff3f;
 }
 
+.pontuacao{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    position: absolute;
+    left: 1%;
+    bottom: 1%;
+    padding: 10px;
+    background: radial-gradient(rgba(0, 0, 0, 0.645), transparent);
+    border-radius: 5px;
+    color: white;
+    text-shadow: 0 0 1px red;
+}
+
 .rodape{
     
     font-family: Arial, Helvetica, sans-serif;

@@ -2,6 +2,7 @@
 var nome;
 var campo;
 
+
 if(localStorage.contadorVisitas){
     let visitas = Number(localStorage.contadorVisitas) + 1;
 
@@ -121,6 +122,15 @@ const comecar = async() =>{
 
 }
 
+
+var inicioRecord = document.querySelector("[data-recorde]");
+var inicioPonto = document.querySelector("[data-ponto]");
+var pontos = 0
+var recorde = localStorage.record
+inicioPonto.innerHTML = `Pontos: ${pontos}`
+inicioRecord.innerHTML = `Recorde: ${recorde}`
+
+
 function confere(num){
     digitado.push(num)
     console.log(digitado)
@@ -134,13 +144,29 @@ function confere(num){
     }
 
     if(digitado.length == sorteado.length){
+        var imprimeRecord = document.querySelector("[data-recorde]")
+        var imprimePonto = document.querySelector("[data-ponto]");
+        pontos += 1;
+
+        
+        if(localStorage.record){
+            recorde = Number(localStorage.record)
+            if(Number(localStorage.record) < pontos){
+                localStorage.record = pontos
+                
+
+            }
+            
+        }else{
+            localStorage.record = 1
+        
+        }
+        imprimeRecord.innerHTML = `Recorde: ${localStorage.record}`
+        imprimePonto.innerHTML = `Pontos: ${pontos}`
+
         comecar()
     }
 
     
-
-
-
-
-
+    
 }
