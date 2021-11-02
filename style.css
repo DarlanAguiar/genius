@@ -164,9 +164,6 @@ span{
     border-top-width: 3px;
     box-shadow: 0 0 30px black;
 }
-.container__vermelho-vermelho:active{
-    background-color: #f87878;
-}
 
 .container__verde-verde{
     width: 35vh;
@@ -178,9 +175,7 @@ span{
     border-top-width: 3px;
     box-shadow: 0 0 30px black;
 }
-.container__verde-verde:active{
-    background: #34ce34;
-}
+
 
 .container__azul-azul{
     width: 35vh;
@@ -193,9 +188,6 @@ span{
     box-shadow: 0 0 30px black;
 }
 
-.container__azul-azul:active{
-    background: #8b8bf7;
-}
 
 .container__amarelo-amarelo{
     width: 35vh;
@@ -206,10 +198,6 @@ span{
     border-right-width: 3px;
     border-bottom-width: 3px;
     box-shadow: 0 0 30px black;
-}
-
-.container__amarelo-amarelo:active{
-    background-color: #ffff3f;
 }
 
 .ok{

@@ -85,6 +85,7 @@ let digitado = []
 const sleep = time => new Promise(resolve => {
     setTimeout(resolve, time)
 })
+
 const comecar = async() =>{
     digitado = []
   
@@ -133,12 +134,8 @@ const comecar = async() =>{
             await sleep(1100)
             botaoAmarelo.style.background ="#797906";
             await sleep(200)
-
-        }
-       
-        
+        }       
     }
-
 }
 
 
@@ -158,28 +155,28 @@ const confere = async(num) => {
         som1.play();
         let botaoVermelho = document.querySelector("[data-botaoVermelho]")
         botaoVermelho.style.background = "#f87878"
-        await sleep(300)
+        await sleep(250)
         botaoVermelho.style.background ="#970404";
     }
     if(num == 2){
         let botaoVerde = document.querySelector("[data-botaoVerde]")
         som2.play();
         botaoVerde.style.background = "#34ce34"
-        await sleep(300)
+        await sleep(250)
         botaoVerde.style.background ="#035403";
     }
     if(num == 3){
         let botaoAzul = document.querySelector("[data-botaoAzul]")
         som3.play();
         botaoAzul.style.background = "#8b8bf7"
-        await sleep(300)
+        await sleep(250)
         botaoAzul.style.background ="#060696";
     }
     if(num == 4){
         let botaoAmarelo = document.querySelector("[data-botaoAmarelo]")
         som4.play();
         botaoAmarelo.style.background = "#ffff3f"
-        await sleep(300)
+        await sleep(250)
         botaoAmarelo.style.background ="#797906";
     }
 
@@ -203,8 +200,6 @@ const confere = async(num) => {
             recorde = Number(localStorage.record)
             if(Number(localStorage.record) < pontos){
                 localStorage.record = pontos
-                
-
             }
             
         }else{
@@ -219,8 +214,4 @@ const confere = async(num) => {
         imprimeOk.style.display="none"
         comecar()
     }
-
-
-    
-    
 }
