@@ -2,6 +2,19 @@
 var nome;
 var campo;
 
+const som1 = new Audio();
+som1.src = "./audio/som1.mp3"
+const som2 = new Audio();
+som2.src = "./audio/som2.mp3"
+const som3 = new Audio();
+som3.src = "./audio/som3.mp3"
+const som4 = new Audio();
+som4.src = "./audio/som4.mp3"
+const somPonto = new Audio();
+somPonto.src = "./audio/ponto.mp3"
+const somPerdeu = new Audio();
+somPerdeu.src = "./audio/perdeu.mp3"
+
 
 if(localStorage.contadorVisitas){
     let visitas = Number(localStorage.contadorVisitas) + 1;
@@ -80,11 +93,14 @@ const comecar = async() =>{
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
+    
     var sorteia = getRandomIntInclusive(1, 4);
+    
     sorteado.push(sorteia)
-    console.log(sorteado)
+
     for(let i = 0; i < sorteado.length; i++){
         if(sorteado[i] == 1){
+            som1.play();
             let botaoVermelho = document.querySelector("[data-botaoVermelho]")
             botaoVermelho.style.background = "#f87878"
             await sleep(1100)
@@ -94,6 +110,7 @@ const comecar = async() =>{
         }
         if(sorteado[i] == 2){
             let botaoVerde = document.querySelector("[data-botaoVerde]")
+            som2.play();
             botaoVerde.style.background = "#34ce34"
             await sleep(1100)
             botaoVerde.style.background ="#007700";
@@ -102,6 +119,7 @@ const comecar = async() =>{
         }
         if(sorteado[i] == 3){
             let botaoAzul = document.querySelector("[data-botaoAzul]")
+            som3.play();
             botaoAzul.style.background = "#8b8bf7"
             await sleep(1100)
             botaoAzul.style.background ="#0000bf";
@@ -110,6 +128,7 @@ const comecar = async() =>{
         }
         if(sorteado[i] == 4){
             let botaoAmarelo = document.querySelector("[data-botaoAmarelo]")
+            som4.play();
             botaoAmarelo.style.background = "#ffff3f"
             await sleep(1100)
             botaoAmarelo.style.background ="#c9c902";
@@ -131,12 +150,13 @@ inicioPonto.innerHTML = `Pontos: ${pontos}`
 inicioRecord.innerHTML = `Recorde: ${recorde}`
 
 
-function confere(num){
+const confere = async(num) => {
     digitado.push(num)
     console.log(digitado)
 
     for(let i = 0; i < digitado.length; i++){
         if(digitado[i] != sorteado[i]){
+            somPerdeu.play();
             alert("errou")
             location.reload();
         }
@@ -163,7 +183,8 @@ function confere(num){
         }
         imprimeRecord.innerHTML = `Recorde: ${localStorage.record}`
         imprimePonto.innerHTML = `Pontos: ${pontos}`
-
+        somPonto.play();
+        await sleep(700)
         comecar()
     }
 
