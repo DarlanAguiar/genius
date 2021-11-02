@@ -179,7 +179,7 @@ const confere = async(num) => {
         let botaoAmarelo = document.querySelector("[data-botaoAmarelo]")
         som4.play();
         botaoAmarelo.style.background = "#ffff3f"
-        await sleep(1100)
+        await sleep(300)
         botaoAmarelo.style.background ="#797906";
     }
 
