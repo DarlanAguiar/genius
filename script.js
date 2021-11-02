@@ -152,7 +152,7 @@ inicioRecord.innerHTML = `Recorde: ${recorde}`
 
 const confere = async(num) => {
     digitado.push(num)
-    console.log(digitado)
+    console.log(num)
 
     for(let i = 0; i < digitado.length; i++){
         if(digitado[i] != sorteado[i]){
@@ -166,6 +166,7 @@ const confere = async(num) => {
     if(digitado.length == sorteado.length){
         var imprimeRecord = document.querySelector("[data-recorde]")
         var imprimePonto = document.querySelector("[data-ponto]");
+        var imprimeOk = document.querySelector("[data-ok]")
         pontos += 1;
 
         
@@ -184,9 +185,12 @@ const confere = async(num) => {
         imprimeRecord.innerHTML = `Recorde: ${localStorage.record}`
         imprimePonto.innerHTML = `Pontos: ${pontos}`
         somPonto.play();
-        await sleep(700)
+        imprimeOk.style.display="block"
+        await sleep(1000)
+        imprimeOk.style.display="none"
         comecar()
     }
+
 
     
     
