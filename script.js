@@ -1,3 +1,4 @@
+//controle de mensagens
 var nome;
 var campo;
 
@@ -31,7 +32,7 @@ if(localStorage.nome == "Jogador Indefinido"){
 }
 
 
-
+//fonções para mostrar trocar jogador e ler regras. 
 
 function mostraCampo (){
     campo = document.querySelector("[data-menu]");
@@ -61,4 +62,85 @@ function  mostraRegras(){
 function apagaRegras(){
     var apagaRegras = document.querySelector("[data-regras]");
     apagaRegras.style.display = 'none'
+}
+
+//logica do jogo
+let sorteado = []
+let digitado = []
+
+const sleep = time => new Promise(resolve => {
+    setTimeout(resolve, time)
+})
+const comecar = async() =>{
+    digitado = []
+  
+    function getRandomIntInclusive(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    var sorteia = getRandomIntInclusive(1, 4);
+    sorteado.push(sorteia)
+    console.log(sorteado)
+    for(let i = 0; i < sorteado.length; i++){
+        if(sorteado[i] == 1){
+            let botaoVermelho = document.querySelector("[data-botaoVermelho]")
+            botaoVermelho.style.background = "#f87878"
+            await sleep(1100)
+            botaoVermelho.style.background ="#d00000";
+            await sleep(200)
+
+        }
+        if(sorteado[i] == 2){
+            let botaoVerde = document.querySelector("[data-botaoVerde]")
+            botaoVerde.style.background = "#34ce34"
+            await sleep(1100)
+            botaoVerde.style.background ="#007700";
+            await sleep(200)
+
+        }
+        if(sorteado[i] == 3){
+            let botaoAzul = document.querySelector("[data-botaoAzul]")
+            botaoAzul.style.background = "#8b8bf7"
+            await sleep(1100)
+            botaoAzul.style.background ="#0000bf";
+            await sleep(200)
+
+        }
+        if(sorteado[i] == 4){
+            let botaoAmarelo = document.querySelector("[data-botaoAmarelo]")
+            botaoAmarelo.style.background = "#ffff3f"
+            await sleep(1100)
+            botaoAmarelo.style.background ="#c9c902";
+            await sleep(200)
+
+        }
+       
+        
+    }
+
+}
+
+function confere(num){
+    digitado.push(num)
+    console.log(digitado)
+
+    for(let i = 0; i < digitado.length; i++){
+        if(digitado[i] != sorteado[i]){
+            alert("errou")
+            location.reload();
+        }
+
+    }
+
+    if(digitado.length == sorteado.length){
+        comecar()
+    }
+
+    
+
+
+
+
+
 }

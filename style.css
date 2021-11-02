@@ -157,7 +157,7 @@ span{
 .container__vermelho-vermelho{
     width: 35vh;
     height: 35vh;
-    background-color: rgb(208, 0, 0);
+    background-color: #d00000;
     border-top-left-radius: 100%;
     border: solid 8px;
     border-left-width: 3px;
@@ -165,13 +165,13 @@ span{
     box-shadow: 0 0 30px black;
 }
 .container__vermelho-vermelho:active{
-    background-color: rgb(248, 120, 120);
+    background-color: #f87878;
 }
 
 .container__verde-verde{
     width: 35vh;
     height: 35vh;
-    background-color: rgb(0, 119, 0);
+    background-color: #007700;
     border-top-right-radius: 100%;
     border: solid 8px;
     border-right-width: 3px;
@@ -179,13 +179,13 @@ span{
     box-shadow: 0 0 30px black;
 }
 .container__verde-verde:active{
-    background-color: rgb(52, 206, 52);
+    background: #34ce34;
 }
 
 .container__azul-azul{
     width: 35vh;
     height: 35vh;
-    background-color: rgb(0, 0, 191);
+    background-color: #0000bf;
     border-bottom-left-radius: 100%;
     border: solid 8px;
     border-left-width: 3px;
@@ -194,13 +194,13 @@ span{
 }
 
 .container__azul-azul:active{
-    background-color: rgb(139, 139, 247);
+    background: #8b8bf7;
 }
 
 .container__amarelo-amarelo{
     width: 35vh;
     height: 35vh;
-    background-color: rgb(201, 201, 2);
+    background-color: #c9c902;
     border-bottom-right-radius: 100%;
     border: solid 8px;
     border-right-width: 3px;
@@ -209,7 +209,7 @@ span{
 }
 
 .container__amarelo-amarelo:active{
-    background-color: rgb(255, 255, 63);
+    background-color: #ffff3f;
 }
 
 .rodape{
