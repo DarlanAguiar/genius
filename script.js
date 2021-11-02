@@ -154,10 +154,39 @@ const confere = async(num) => {
     digitado.push(num)
     console.log(num)
 
+    if(num == 1){
+        som1.play();
+        let botaoVermelho = document.querySelector("[data-botaoVermelho]")
+        botaoVermelho.style.background = "#f87878"
+        await sleep(300)
+        botaoVermelho.style.background ="#970404";
+    }
+    if(num == 2){
+        let botaoVerde = document.querySelector("[data-botaoVerde]")
+        som2.play();
+        botaoVerde.style.background = "#34ce34"
+        await sleep(300)
+        botaoVerde.style.background ="#035403";
+    }
+    if(num == 3){
+        let botaoAzul = document.querySelector("[data-botaoAzul]")
+        som3.play();
+        botaoAzul.style.background = "#8b8bf7"
+        await sleep(300)
+        botaoAzul.style.background ="#060696";
+    }
+    if(num == 4){
+        let botaoAmarelo = document.querySelector("[data-botaoAmarelo]")
+        som4.play();
+        botaoAmarelo.style.background = "#ffff3f"
+        await sleep(1100)
+        botaoAmarelo.style.background ="#797906";
+    }
+
     for(let i = 0; i < digitado.length; i++){
         if(digitado[i] != sorteado[i]){
             somPerdeu.play();
-            alert("errou")
+            alert("ERROU")
             location.reload();
         }
 
