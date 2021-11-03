@@ -138,6 +138,9 @@ const comecar = async() =>{
     }
 }
 
+if(!localStorage.record){
+    localStorage.record = 0
+}
 
 var inicioRecord = document.querySelector("[data-recorde]");
 var inicioPonto = document.querySelector("[data-ponto]");
@@ -145,6 +148,7 @@ var pontos = 0
 var recorde = localStorage.record
 inicioPonto.innerHTML = `Pontos: ${pontos}`
 inicioRecord.innerHTML = `Recorde: ${recorde}`
+
 
 
 const confere = async(num) => {
@@ -195,17 +199,10 @@ const confere = async(num) => {
         var imprimeOk = document.querySelector("[data-ok]")
         pontos += 1;
 
-        
-        if(localStorage.record){
-            recorde = Number(localStorage.record)
-            if(Number(localStorage.record) < pontos){
-                localStorage.record = pontos
-            }
-            
-        }else{
-            localStorage.record = 1
-        
+        if(Number(localStorage.record) < pontos){
+            localStorage.record = pontos
         }
+       
         imprimeRecord.innerHTML = `Recorde: ${localStorage.record}`
         imprimePonto.innerHTML = `Pontos: ${pontos}`
         somPonto.play();
