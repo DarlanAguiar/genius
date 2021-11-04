@@ -69,12 +69,12 @@ function salvaJogador (){
 }
 
 function  mostraRegras(){
-    var regras = document.querySelector("[data-regras]");
+    let regras = document.querySelector("[data-regras]");
     regras.style.display = 'block'
 }
 
 function apagaRegras(){
-    var apagaRegras = document.querySelector("[data-regras]");
+    let apagaRegras = document.querySelector("[data-regras]");
     apagaRegras.style.display = 'none'
 }
 
@@ -95,7 +95,7 @@ const comecar = async() =>{
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
     
-    var sorteia = getRandomIntInclusive(1, 4);
+    const sorteia = getRandomIntInclusive(1, 4);
     
     sorteado.push(sorteia)
 
@@ -142,10 +142,10 @@ if(!localStorage.record){
     localStorage.record = 0
 }
 
-var inicioRecord = document.querySelector("[data-recorde]");
-var inicioPonto = document.querySelector("[data-ponto]");
-var pontos = 0
-var recorde = localStorage.record
+const inicioRecord = document.querySelector("[data-recorde]");
+const inicioPonto = document.querySelector("[data-ponto]");
+let pontos = 0
+let recorde = localStorage.record
 inicioPonto.innerHTML = `Pontos: ${pontos}`
 inicioRecord.innerHTML = `Recorde: ${recorde}`
 
