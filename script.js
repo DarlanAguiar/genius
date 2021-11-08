@@ -86,8 +86,11 @@ const sleep = time => new Promise(resolve => {
     setTimeout(resolve, time)
 })
 
+
+var fimDaAnimacao;
 const comecar = async() =>{
     digitado = []
+    fimDaAnimacao = 0
   
     function getRandomIntInclusive(min, max) {
         min = Math.ceil(min);
@@ -107,6 +110,7 @@ const comecar = async() =>{
             await sleep(800)
             botaoVermelho.style.background ="#970404";
             await sleep(200)
+            fimDaAnimacao += 1
 
         }
         if(sorteado[i] == 2){
@@ -116,7 +120,7 @@ const comecar = async() =>{
             await sleep(800)
             botaoVerde.style.background ="#035403";
             await sleep(200)
-
+            fimDaAnimacao += 1
         }
         if(sorteado[i] == 3){
             let botaoAzul = document.querySelector("[data-botaoAzul]")
@@ -125,7 +129,7 @@ const comecar = async() =>{
             await sleep(800)
             botaoAzul.style.background ="#060696";
             await sleep(200)
-
+            fimDaAnimacao += 1
         }
         if(sorteado[i] == 4){
             let botaoAmarelo = document.querySelector("[data-botaoAmarelo]")
@@ -134,6 +138,7 @@ const comecar = async() =>{
             await sleep(800)
             botaoAmarelo.style.background ="#797906";
             await sleep(200)
+            fimDaAnimacao += 1
         }       
     }
 }
@@ -152,8 +157,16 @@ inicioRecord.innerHTML = `Recorde: ${recorde}`
 
 
 const confere = async(num) => {
+    
+    if(fimDaAnimacao != sorteado.length){
+        return
+    }
+   
     digitado.push(num)
-    console.log(num)
+
+    console.log(sorteado.length)
+    console.log(fimDaAnimacao)
+
 
     if(num == 1){
         som1.play();
