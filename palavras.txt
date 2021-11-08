@@ -1,7 +1,1 @@
-Oi
-Essa
-edge
-minha
-lista
-de
-palavras
+["Oi", "Essa", "edge", "minha", "lista", "de", "palavras"] 
