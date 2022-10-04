@@ -87,9 +87,13 @@ const sleep = time => new Promise(resolve => {
 
 
 var fimDaAnimacao;
+var ocorrendoAnimacao = false;
 const comecar = async() =>{
+    if (ocorrendoAnimacao) return
+    if (digitado.length != sorteado.length) return
     digitado = []
     fimDaAnimacao = 0
+    ocorrendoAnimacao = true;
   
     function getRandomIntInclusive(min, max) {
         min = Math.ceil(min);
@@ -97,9 +101,9 @@ const comecar = async() =>{
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
     
-    const sorteia = getRandomIntInclusive(1, 4);
+    const sortear = getRandomIntInclusive(1, 4);
     
-    sorteado.push(sorteia)
+    sorteado.push(sortear)
 
     for(let i = 0; i < sorteado.length; i++){
         if(sorteado[i] == 1){
@@ -140,7 +144,7 @@ const comecar = async() =>{
             fimDaAnimacao += 1
         }       
     }
-}
+    ocorrendoAnimacao = false;}
 
 if(!localStorage.record){
     localStorage.record = 0
@@ -162,10 +166,6 @@ const confere = async(num) => {
     }
    
     digitado.push(num)
-
-    console.log(sorteado.length)
-    console.log(fimDaAnimacao)
-
 
     if(num == 1){
         som1.play();
