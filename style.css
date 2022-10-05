@@ -47,7 +47,6 @@
     border-radius: 5px;
     color: white;
     text-shadow: 0 0 1px red;
-    
 }
 
 .menu{
@@ -59,9 +58,7 @@
     display: none;
     border-radius: 4px;
     padding: 7px;
-   
 }
-
 
 .regras{
     position: absolute;
@@ -84,7 +81,6 @@
     text-shadow: 0 0 1px red;
 }
 
-
 .salvar{
     padding: 10px;
     background: radial-gradient(rgba(0, 0, 0, 0.645), transparent);
@@ -92,8 +88,6 @@
     color: white;
     text-shadow: 0 0 1px red;
 }
-
-
 
 .texto{
     font-family: Arial, Helvetica, sans-serif;
@@ -244,14 +238,13 @@ span{
     text-shadow: 1px 1px 1px rgba(255, 235, 205, 0.556);
 
 }
+
 a{
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
 
 @media screen and (max-width: 588px){
-    
-    
     .texto{
         font-size: 1rem;
     }
@@ -281,7 +274,6 @@ a{
         width: 45vw;
         height: 45vw;
     }
-
 
     .rodape{
         font-size: 1rem;
