@@ -6,4 +6,4 @@ A memory game.
 
 Your mission is to repeat the sequence imposed by the game.
 
-Deploy - [Genius](https://darlanaguiar.github.io/genius/)
+Deploy - [Start Genius](https://darlanaguiar.github.io/genius/)
